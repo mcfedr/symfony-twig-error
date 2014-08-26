@@ -1,0 +1,12 @@
+services:
+    mcfedr_twig_error.twig_escaping:
+        class: Mcfedr\TwigErrorBundle\Twig\EscapingGuesser
+        arguments:
+            - @logger
+
+    mcfedr_twig_error.command.hello:
+        class: Mcfedr\TwigErrorBundle\Command\HelloCommand
+        arguments:
+            - @templating
+        tags:
+            - { name: console.command }
